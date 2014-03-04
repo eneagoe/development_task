@@ -1,0 +1,63 @@
+<h1>Failed charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Amount</th>
+      <th>Failed at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render partial: 'unsuccessful', collection: @charges.unsuccessful, as: :charge %>
+  </tbody>
+
+</table>
+
+<h1>Disputed charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Amount</th>
+      <th>Disputed at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render partial: 'disputed', collection: @charges.disputed, as: :charge %>
+  </tbody>
+
+</table>
+
+<h1>Successful charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Amount</th>
+      <th>Created at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render partial: 'successful', collection: @charges.successful, as: :charge %>
+  </tbody>
+
+</table>
+
+<br>
+
+<%= link_to 'New Charge', new_charge_path %>

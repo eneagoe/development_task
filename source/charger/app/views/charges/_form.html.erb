@@ -1,0 +1,12 @@
+<%= simple_form_for(@charge) do |f| %>
+
+  <ul>
+  <li><%= f.association :customer, label_method: :full_name %></li>
+  <li><%= f.input :paid %></li>
+  <li><%= f.input :amount %></li>
+  <li><%= f.input :currency, collection: ["usd", "gbp", "eur", "inr"], include_blank: false %></li>
+  <li><%= f.input :refunded %></li>
+  </ul>
+  <%= f.button :submit %>
+
+<% end %>

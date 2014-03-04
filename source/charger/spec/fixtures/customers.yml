@@ -1,0 +1,19 @@
+dean:
+  first_name: Dean
+  last_name: Martin
+  email: dean.martin@culini.com
+
+buddy:
+  first_name: Buddy
+  last_name: Rich
+  email: buddy.rich@culini.com
+
+miles:
+  first_name: Miles
+  last_name: Davis
+  email: miles.davis@culini.com
+
+billie:
+  first_name: Billie
+  last_name: Holiday
+  email: billie.holiday@culini.com

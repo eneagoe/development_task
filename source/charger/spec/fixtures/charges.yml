@@ -1,0 +1,70 @@
+# successful charges
+<% 5.times do |n| %>
+charge_dean_<%= n %>:
+  customer: dean
+  paid: true
+  refunded: false
+  amount: <%= n %>
+  currency: "usd"
+<% end %>
+
+<% 3.times do |n| %>
+charge_buddy_<%= n %>:
+  customer: buddy
+  paid: true
+  refunded: false
+  amount: <%= n %>
+  currency: "usd"
+<% end %>
+
+charge_miles:
+  customer: miles
+  paid: true
+  refunded: false
+  amount: 1
+  currency: "usd"
+
+charge_billie:
+  customer: billie
+  paid: true
+  refunded: false
+  amount: 1
+  currency: "usd"
+
+# failed charges
+<% 3.times do |n| %>
+failed_charge_miles_<%= n %>:
+  customer: miles
+  paid: false
+  refunded: false
+  amount: <%= n %>
+  currency: "usd"
+<% end %>
+
+<% 2.times do |n| %>
+failed_charge_billie_<%= n %>:
+  customer: billie
+  paid: false
+  refunded: false
+  amount: <%= n %>
+  currency: "usd"
+<% end %>
+
+# disputed/refunded charges
+<% 3.times do |n| %>
+failed_charge_dean_<%= n %>:
+  customer: dean
+  paid: true
+  refunded: true
+  amount: <%= n %>
+  currency: "usd"
+<% end %>
+
+<% 2.times do |n| %>
+failed_charge_buddy_<%= n %>:
+  customer: buddy
+  paid: true
+  refunded: true
+  amount: <%= n %>
+  currency: "usd"
+<% end %>
